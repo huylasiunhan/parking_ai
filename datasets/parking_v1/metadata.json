@@ -1,29 +1,20 @@
 {
   "dataset_version": "parking_v1",
-  "description": "Fixed-camera parking occupancy dataset with vehicle bounding boxes, slot polygons, and segmentation masks.",
+  "name": "PKLot 640",
+  "description": "PKLot dataset resized to 640x640 with bounding box annotations for occupied and empty parking spaces.",
   "license": "CC BY 4.0",
-  "primary_source": "PKLot / Surveillance Camera Benchmark",
+  "primary_source": "Roboflow Universe (brad-dwyer/pklot-1tros/dataset/2)",
   "created_at": "2026-10-07",
   "classes": {
-    "0": "car",
-    "1": "truck",
-    "2": "bus",
-    "3": "motorcycle"
+    "0": "space-empty",
+    "1": "space-occupied"
   },
-  "slot_status_definition": {
-    "0": "EMPTY",
-    "1": "OCCUPIED"
+  "counts": {
+    "train": 8691,
+    "val": 2483,
+    "test": 1242,
+    "total": 12416
   },
-  "split_policy": {
-    "train_ratio": 0.70,
-    "val_ratio": 0.15,
-    "test_ratio": 0.15,
-    "leakage_prevention": "Strict split by independent camera scene / date, no adjacent frame temporal leakage."
-  },
-  "data_efficiency_subsets": [
-    "train_10pct",
-    "train_25pct",
-    "train_50pct",
-    "train_100pct"
-  ]
+  "resolution": "640x640",
+  "format": "YOLOv8 txt"
 }

@@ -65,7 +65,12 @@ htmlcov/
 
 datasets/*
 !datasets/parking_v1/
-!datasets/parking_v1/.gitkeep
+!datasets/parking_v1/metadata.json
+!datasets/parking_v1/splits/
+datasets/**/images/
+datasets/**/labels/
+datasets/**/masks/
+datasets/**/samples/
 
 # ============================================================
 # Checkpoints
